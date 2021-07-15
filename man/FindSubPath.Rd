@@ -4,8 +4,15 @@
 \alias{FindSubPath}
 \title{FindSubPath}
 \usage{
-FindSubPath(zz, Pathway = "kegg", delta = 0.05, seed_p = 0.05,
-  min.size = 5, out.F = FALSE, out.file = "Subpath.txt")
+FindSubPath(
+  zz,
+  Pathway = "kegg",
+  delta = 0.05,
+  seed_p = 0.05,
+  min.size = 5,
+  out.F = FALSE,
+  out.file = "Subpath.txt"
+)
 }
 \arguments{
 \item{zz}{A numeric vector of z_scores.}
@@ -26,10 +33,10 @@ FindSubPath(zz, Pathway = "kegg", delta = 0.05, seed_p = 0.05,
 Key dysfunctional subpathways in each pathway, in which the risk score of the genes were significantly higher.
 }
 \description{
-\code{FindSubPath} uses a greedy search algorithm to search for key subpathways in each entire pathway.
+`FindSubPath` uses a greedy search algorithm to search for key subpathways in each entire pathway.
 }
 \examples{
 require(graphite)
 zz<-GetExampleData("zzz")
-\dontrun{k<-FindSubPath(zz)}
+\donttest{k<-FindSubPath(zz)}
 }

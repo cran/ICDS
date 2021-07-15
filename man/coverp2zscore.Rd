@@ -13,13 +13,13 @@ coverp2zscore(pdata)
 A numeric vector of z_scores
 }
 \description{
-\code{coverp2zscore} calculate z-scores for p-values
+`coverp2zscore` calculate z-scores for p-values
 }
 \examples{
 exp.p<-GetExampleData("exp.p")
 meth.p<-GetExampleData("meth.p")
 cnv.p<-GetExampleData("cnv.p")
-\dontrun{coverp2zscore(exp.p)}
-\dontrun{coverp2zscore(meth.p)}
-\dontrun{coverp2zscore(cnv.p)}
+coverp2zscore(exp.p)
+coverp2zscore(meth.p)
+coverp2zscore(cnv.p)
 }

@@ -19,7 +19,7 @@ getMethp(meth_data, label, p.adjust = TRUE, method = "fdr")
 A numeric vector of p-values or corrected p-values
 }
 \description{
-\code{getMethp} perform t-test on Methylation profile data
+`getMethp` perform t-test on Methylation profile data
 }
 \details{
 For a given Methylation profile of two conditions, ICDS package provide t-test method to calculate p-values or corrected p-values(if p.adjust=TRUE,return corrected p-values,if p.adjust=FALSE,return p-values.) for each genes. The row of the Methylation profile should be gene symbols and the column of the Methylation profile should be names of samples. Samples should be under two conditions and the label should be given as 0 and 1.
@@ -27,5 +27,5 @@ For a given Methylation profile of two conditions, ICDS package provide t-test m
 \examples{
 profile<-GetExampleData("meth_data")
 label<-GetExampleData("label2")
-\dontrun{getMethp(profile,label,p.adjust=FALSE)}
+getMethp(profile,label,p.adjust=FALSE)
 }

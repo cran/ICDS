@@ -15,10 +15,10 @@ combinep_two(p1, p2)
 A numeric vector of z_scores
 }
 \description{
-\code{combinep_two} combine two kinds of p-values,then,calculate z-score for them.
+`combinep_two` combine two kinds of p-values,then,calculate z-score for them.
 }
 \examples{
 exp.p<-GetExampleData("exp.p")
 meth.p<-GetExampleData("meth.p")
-\dontrun{combinep_two(exp.p,meth.p)}
+combinep_two(exp.p,meth.p)
 }

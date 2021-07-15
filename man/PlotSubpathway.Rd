@@ -4,8 +4,13 @@
 \alias{PlotSubpathway}
 \title{PlotSubpathway}
 \usage{
-PlotSubpathway(subpID, pathway.name, zz, Pathway = "kegg",
-  layout = layout.fruchterman.reingold)
+PlotSubpathway(
+  subpID,
+  pathway.name,
+  zz,
+  Pathway = "kegg",
+  layout = layout.fruchterman.reingold
+)
 }
 \arguments{
 \item{subpID}{gene list of a interested subpathway}
@@ -27,8 +32,8 @@ PlotSubpathway:plot a network graph when user input a list of gene
 \examples{
 require(graphite)
 
-subpID<-unlist(strsplit("G6PC/HK3/GPI/FBP1/ALDOA/G6PC2","/"))
+subpID<-unlist(strsplit("ACSS1/ALDH3B2/ADH1B/ADH1A/ALDH2/DLAT/ACSS2","/"))
 pathway.name="Glycolysis / Gluconeogenesis"
 zzz<- GetExampleData("zzz")
-\dontrun{PlotSubpathway(subpID=subpID,pathway.name=pathway.name,zz=zzz)}
+\donttest{PlotSubpathway(subpID=subpID,pathway.name=pathway.name,zz=zzz)}
 }

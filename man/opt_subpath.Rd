@@ -17,10 +17,10 @@ opt_subpath(subpathdata, zz, overlap = 0.6)
 Optimized subpathway:the number of genes shared by any two pathways accounted for less than the Overlap ratio of each pathway genes.
 }
 \description{
-\code{opt_subpath} Optimize interested subpathways.If the number of genes shared by the two pathways accounted for more than the Overlap ratio of each pathway genes,then combine two pathways.
+`opt_subpath` Optimize interested subpathways.If the number of genes shared by the two pathways accounted for more than the Overlap ratio of each pathway genes,then combine two pathways.
 }
 \examples{
 zz<-GetExampleData("zzz")
 subpathdata<-GetExampleData("subpathdata")
-\dontrun{optsubpath<-opt_subpath(subpathdata,zz,overlap=0.6)}
+optsubpath<-opt_subpath(subpathdata,zz,overlap=0.6)
 }

@@ -88,7 +88,7 @@ cnv.p<-getCnvp(exp_data,cnv_data,amp_gene,del_gene,p.adjust=FALSE,method="fdr")
 cnv.p[1:10,]
 ```
 
-## 3 Example:Combine P-values of different kinds of data
+## 3 Example: Combine P-values of different kinds of data
 With the above data, we constructed an integrative gene z-score (Z) based three datasets.
 
 + Firstly,the gene score calculated through combined p-values of Fisher’s Inverse chi-square tests. This method computes a combined statistic S from the p-values of the difference coefficient obtained from three individual datasets .Usually,the statistic S follows a chi-square distribution with 2k degrees,we can calculate the null hypothesis p-value of the statistic S.
@@ -117,7 +117,7 @@ zzz<-combinep_three(exp.p,meth.p,cnv.p)
 zzz[1:6,]
 ```
 
-## 4 Example:Obtain subpathways
+## 4 Example: Obtain subpathways
 For a priori KEGG path, we perform a greedy algorithm to search for interested subpathways.We provide two statistical test methods of the subpathway, which one is whole gene-based perturbation, and the other is the local gene perturbation in a particular pathway.
 ```{r}
 #obtain z-score of each gene
@@ -144,12 +144,12 @@ keysubpathways<-Permutation(keysubpathways,zz,nperm1=100,method1=TRUE,nperm2=100
 head(keysubpathways)
 ```
 
-## 4 Example:plot a network graph when user input a list of gene
+## 4 Example: plot a network graph when user input a list of gene
 
 ```{r}
 require(graphite)
 require(org.Hs.eg.db)
-subpID<-unlist(strsplit("G6PC/HK3/GPI/FBP1/ALDOA/G6PC2","/"))
+subpID<-unlist(strsplit("ACSS1/ALDH3B2/ADH1B/ADH1A/ALDH2/DLAT/ACSS2","/"))
 pathway.name="Glycolysis / Gluconeogenesis"
 zzz<- GetExampleData("zzz")
 PlotSubpathway(subpID=subpID,pathway.name=pathway.name,zz=zzz)

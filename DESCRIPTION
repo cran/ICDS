@@ -1,21 +1,27 @@
 Package: ICDS
 Type: Package
-Title: Identification of Cancer Dysfunctional Subpathway by Integrating
-        DNA Methylation, Copy Number Variation, and Gene Expression
+Title: Identification of Cancer Dysfunctional Subpathway with Omics
         Data
-Version: 0.1.1
-Author: Junwei Han,Baotong Zheng,Siyao Liu
+Version: 0.1.2
+Authors@R: c(
+    person("Junwei", "Han", email = "hanjunwei1981@163.com", role = "cre"),
+    person("Baotong", "Zheng", email = "btzheng1116@163.com", role = "aut"),
+    person("Siyao", "Liu", email = "liusiyao29@163.com", role = "ctb"))
 Maintainer: Junwei Han <hanjunwei1981@163.com>
 Description: Identify Cancer Dysfunctional Sub-pathway by integrating gene expression, DNA methylation and copy number variation, and pathway topological information. 1)We firstly calculate the gene risk scores by integrating three kinds of data: DNA methylation, copy number variation, and gene expression.  2)Secondly, we perform a greedy search algorithm to identify the key dysfunctional sub-pathways within the pathways for which the discriminative scores were locally maximal. 3)Finally, the permutation test was used to calculate statistical significance level for these key dysfunctional sub-pathways.
+Depends: R (>= 2.10)
+biocViews:
+Imports: igraph, graphite, metap, methods, org.Hs.eg.db
+Suggests: knitr, rmarkdown, prettydoc
 License: GPL (>= 2)
 Encoding: UTF-8
 LazyData: true
-Suggests: knitr, rmarkdown, prettydoc
+RoxygenNote: 7.1.1
 VignetteBuilder: knitr
-Imports: igraph, graphite, metap, methods, org.Hs.eg.db
-Depends: R (>= 2.10)
-RoxygenNote: 6.1.1
 NeedsCompilation: no
-Packaged: 2019-01-18 08:22:40 UTC; zbt
+Packaged: 2021-07-15 02:48:16 UTC; mac
+Author: Junwei Han [cre],
+  Baotong Zheng [aut],
+  Siyao Liu [ctb]
 Repository: CRAN
-Date/Publication: 2019-01-25 17:00:10 UTC
+Date/Publication: 2021-07-15 11:30:10 UTC

@@ -19,10 +19,10 @@
 #' @examples
 #' require(graphite)
 #'
-#' subpID<-unlist(strsplit("G6PC/HK3/GPI/FBP1/ALDOA/G6PC2","/"))
+#' subpID<-unlist(strsplit("ACSS1/ALDH3B2/ADH1B/ADH1A/ALDH2/DLAT/ACSS2","/"))
 #' pathway.name="Glycolysis / Gluconeogenesis"
 #' zzz<- GetExampleData("zzz")
-#' \dontrun{PlotSubpathway(subpID=subpID,pathway.name=pathway.name,zz=zzz)}
+#' \donttest{PlotSubpathway(subpID=subpID,pathway.name=pathway.name,zz=zzz)}
 PlotSubpathway<-function(subpID,pathway.name,zz,Pathway="kegg",layout=layout.fruchterman.reingold){
   dbpkg <- "org.Hs.eg.db"
   pkgs <- installed.packages()[,1]
@@ -36,7 +36,7 @@ PlotSubpathway<-function(subpID,pathway.name,zz,Pathway="kegg",layout=layout.fru
 	graph.data.frame(unique(Pairs,stringsAsFactors=FALSE), directed=FALSE)->graph;
 	simpleGraph<-simplify(graph);
 
-
+  
 	g2<-induced_subgraph(simpleGraph,subpID);
 	nz<-zz[match(names(V(g2)),rownames(zz)),"z_score"];
 	myc<-colorRampPalette(c("#F4BEBE", "#F90D0D"))(length(nz))[order(order(nz))];

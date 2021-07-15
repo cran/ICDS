@@ -17,11 +17,11 @@ combinep_three(p1, p2, p3)
 A numeric vector of z_scores
 }
 \description{
-\code{combinep_three} combine three kinds of p-values,then,calculate z-score for them.
+`combinep_three` combine three kinds of p-values,then,calculate z-score for them.
 }
 \examples{
 exp.p<-GetExampleData("exp.p")
 meth.p<-GetExampleData("meth.p")
 cnv.p<-GetExampleData("cnv.p")
-\dontrun{combinep_three(exp.p,meth.p,cnv.p)}
+\donttest{combinep_three(exp.p,meth.p,cnv.p)}
 }

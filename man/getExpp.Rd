@@ -19,7 +19,7 @@ getExpp(exp_data, label, p.adjust = TRUE, method = "fdr")
 A numeric vector of p-values or corrected p-values
 }
 \description{
-\code{getExpp} perform t-test on Expression profile data
+`getExpp` perform t-test on Expression profile data
 }
 \details{
 For a given expression profile of two conditions, ICDS package provide t-test method to calculate p-values or corrected p-values(if p.adjust=TRUE,return corrected p-values,if p.adjust=FALSE,return p-values.) for each genes. The row of the expression profile should be gene symbols and the column of the expression profile should be names of samples. Samples should be under two conditions and the label should be given as 0 and 1.
@@ -27,5 +27,5 @@ For a given expression profile of two conditions, ICDS package provide t-test me
 \examples{
 profile<-GetExampleData("exp_data")
 label<-GetExampleData("label1")
-\dontrun{getExpp(profile,label,p.adjust=FALSE)}
+getExpp(profile,label,p.adjust=FALSE)
 }
